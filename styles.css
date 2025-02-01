@@ -29,16 +29,20 @@ header {
     margin-bottom: 15px;
 }
 
-h1 {
+.header-text h1 {
     font-family: 'Lobster', cursive;
     font-size: 60px;
     margin: 0;
 }
 
-h2 {
+.header-text h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 30px;
-    margin: 0;
+    margin-bottom: 25px;
+}
+
+.left-side h2 {
+  margin-top: 45px;
 }
 
 .profile-pic {
@@ -89,8 +93,8 @@ nav ul li a:hover {
 }
 
 section {
-    height: 90vh;
-    padding: 70px;
+    height: 100vh;
+    padding: 10px;
     background-color: black;
     color: #eee;
     border-radius: 10px;
@@ -126,20 +130,47 @@ section {
     object-fit: cover;
 }
 
-#education h2 {
-    text-align: left;
-    margin-bottom: 2px;
-    margin-left: 50px;
-    font-family: 'Lobster', cursive;
-    font-size: 50px;
+.skills-image {
+  display: flex;
+  justify-content: space-between; /* Distributes images evenly */
+  align-items: center;
+  gap: 15px; /* Adjust spacing between images */
+  padding: 10px;
+  width: 500px; /* Make the container smaller */
+  margin-left: 50px; /* Moves the container to the right */
 }
 
-.education-container {
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    gap: 120px;
+.skills-image img {
+  width: 100px;  /* Adjust image width */
+  height: auto;
+  border-radius: 10px; /* Optional: adds rounded corners */
+  transition: transform 0.3s ease-in-out;
 }
+
+.skills-image img:hover {
+  transform: scale(1.1); /* Optional: hover effect */
+}
+
+
+#education h2 {
+  text-align: left;
+  margin-top: 50px;  /* Reset margin-top */
+  padding-bottom: 2px;  /* Add padding instead of margin to prevent collapse */
+  margin-left: 50px;
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  position: relative;
+  top: -20px;  /* Adjust this value as needed */
+}
+
+
+.education-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
 
 .card {
     background-color: black;
@@ -170,7 +201,7 @@ section {
     margin-left: 2px;
 }
 
-pre {
+.pre {
     white-space: pre-wrap;
     font-family: inherit;
 }
@@ -186,20 +217,19 @@ pre {
 }
 
 /* Project section title styling */
-.project-section h2 {
-    text-align: left;
-    font-family: 'Lobster', cursive;
-    font-size: 50px; /* Reduced size */
-    margin-left: 50px;
-    color: whitesmoke;
+#main  {
+  text-align: left;
+  margin-top: 10px;  /* Reset margin-top */
+  padding-bottom: 2px;  /* Add padding instead of margin to prevent collapse */
+  margin-left: 50px;
+  font-family: 'Lobster', cursive;
+  font-size: 50px; /* Reduced size */
+  color: rgb(255, 255, 255);
 }
 
-.project-section {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+#project {
+display: flex;
+flex-direction: column;
 }
 
 .carousel-container {
