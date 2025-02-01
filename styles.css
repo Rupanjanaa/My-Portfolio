@@ -142,7 +142,7 @@ section {
 }
 
 .card {
-    background-color: #f8f9fa;
+    background-color: black;
     border: 2px solid #8b0000;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(139, 0, 0, 0.7);
@@ -158,18 +158,14 @@ section {
 }
 
 .card-img-top {
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
+  height: 200px;
+  object-fit: cover;
+  width: 100%;  
 }
 
-.card-body {
-    background-color: black;
-    opacity: 0.85;
-}
 
 .card-title {
-    color: green;
+    color: rgb(236, 223, 236);
     text-align: left;
     margin-left: 2px;
 }
