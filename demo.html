@@ -16,12 +16,14 @@
     <li><a href="#about">About Me</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#project">Projects</a></li>
+    <li><a href="#contact" class="button-link">Contact me</a></li>
   </ul>
 </nav>
 <header>
-  <div class="header-text">
+  <div class="header-text fade-in">
     <h1 id="greeting">HI THERE!</h1>
-    <h2>I'M RUPANJANA BHATTACHARJEE.</h2>
+    <div class="header-box">
+      <h2>I'M RUPANJANA BHATTACHARJEE.</h2>
     <pre>
       Web development is a dynamic and ever-evolving field that involves creating
       and maintaining websites. It encompasses a range of skills and disciplines,
@@ -29,69 +31,147 @@
       design the user interface, and back-end development with server-side languages
       and databases to manage and process data.
     </pre>
-    <button onclick="location.href='resume.pdf'">Resume</button>
-    <button><a href="#contact" style="color: white; text-decoration: none;">Contact me</a></button>
+    </div>
+    <div class="resume fade-in">
+      <button onclick="location.href='resume.pdf'">Download CV</button>
+    </div>
   </div>
-  <div class="profile-pic">
-    <img src="img.png" alt="Profile Picture">
+  <div class="profile-pic fade-in">
+    <img src="myself.jpg" alt="Profile Picture">
   </div>
 </header>
-<section id="about">
-  <div class="right-side">
-    <img src="img_3.png" alt="Left Side Image">
-  </div>
-  <div class="left-side">
-    <h2>About me</h2>
-    <br>
-    <br>
-    <pre>
-        I am a dedicated frontend developer with a deep passion for art and design.
-        Combining my technical skills with my creative background,I strive to create
-        visually stunning and user-friendly websites.I believe that great design is
-        about more than just aesthetics; it's about crafting,engaging,intuitive
-        experiences that delight users and bring ideas to life. My love for art
-        fuels my creativity, allowing me to think outside the box and push
-        boundaries of web design.</pre>
-  </div>
-  <div class="skills-image">
-    <img src="image1.png" alt="Image 1">
-    <img src="image2.png" alt="Image 2">
-    <img src="img_3.png" alt="Image 3">
-    <img src="img.png" alt="Image 4">
-  </div>
-</section>
-<section id="education">
-  <h2>Education</h2>
-  <div class="education-container">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="image1.png" alt="Highschool">
-      <div class="card-body">
-        <h5 class="card-title">Highschool Education</h5>
-        <p class="card-text">
-          Completed my higher secondary from Kendriya Vidyalaya, EAC, Upper Shillong<br>
-          Pass out year: 2021
-        </p>
+
+<div class="container fade-in">
+  <h2>Skills</h2>
+    <div class="skills-grid fade-in">
+      <div class="skill">
+        <div class="icon">
+          <img src="java.png" alt="Skill Icon">
+        </div>
+        <div class="info">
+          <div class="bar">
+          <div class="progress" style="width: 80%;"></div>
+        </div>
+        <span>80%</span>
       </div>
     </div>
 
-    <!-- Bachelor's Degree Card -->
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="image2.png" alt="Bachelors">
-      <div class="card-body">
-        <h5 class="card-title">Bachelor's Degree</h5>
-        <p class="card-text">
-          Pursuing my Bachelor of Technology (B.Tech) in Computer Science from Amity University Kolkata<br>
-          Batch: 2021-2025
-        </p>
+    <div class="skill">
+      <div class="icon">
+        <img src="react.jpg" alt="Skill Icon">
+      </div>
+      <div class="info">
+        <div class="bar">
+          <div class="progress" style="width: 57%;"></div>
+        </div>
+        <span>57%</span>
+      </div>
+    </div>
+
+    <div class="skill" id="sql">
+      <div class="icon">
+        <img src="sql.png" alt="Skill Icon">
+      </div>
+      <div class="info">
+        <div class="bar">
+          <div class="progress" style="width: 90%;"></div>
+        </div>
+        <span>90%</span>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="icon">
+        <img src="javascript.webp" alt="Skill Icon">
+      </div>
+      <div class="info">
+        <div class="bar">
+          <div class="progress" style="width: 92%;"></div>
+        </div>
+        <span>92%</span>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="icon">
+        <img src="redux.jpg" alt="Skill Icon">
+      </div>
+      <div class="info">
+        <div class="bar">
+          <div class="progress" style="width: 55%;"></div>
+        </div>
+        <span>55%</span>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="icon">
+        <img src="html.jpg" alt="Skill Icon">
+      </div>
+      <div class="info">
+        <div class="bar">
+          <div class="progress" style="width: 32%;"></div>
+        </div>
+        <span>32%</span>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="icon">
+        <img src="css.jpg" alt="Skill Icon">
+      </div>
+      <div class="info">
+        <div class="bar">
+          <div class="progress" style="width: 32%;"></div>
+        </div>
+        <span>32%</span>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="icon">
+        <img src="react.webp" alt="Skill Icon">
+      </div>
+      <div class="info">
+        <div class="bar">
+          <div class="progress" style="width: 22%;"></div>
+        </div>
+        <span>22%</span>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section id="project">
-  <h2 id="main">Projects</h2>
-  <div class="carousel-container">
-    <div class="carousel">
+  <div class="container fade-in">
+    <h2>Education</h2>
+    <div class="wrapper fade-in">
+      <div class="left-div  fade-in">
+        <ul>
+          <li onclick="showContent('school')">School</li>
+          <li onclick="showContent('college')">College</li>
+          <li onclick="showContent('certificates')">Certificates</li>
+        </ul>
+      </div>
+      <div class="right-div fade-in" id="content">
+        <div class="content-wrapper">
+          <div class="text-area" id="text-area">
+            <h3>Select an option</h3>
+            <p>Description will appear here.</p>
+          </div>
+          <div class="inner-right">
+            <img src="image1.png" alt="Education Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container fade-in">
+  <h2>Projects</h2>
+  <div class="carousel-container  fade-in">
+    <div class="carousel fade-in">
       <div class="carousel-track">
         <div class="carousel-item">
           <div class="content">
@@ -114,18 +194,18 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section id="contact" class="contact-form-container">
+<div class="container fade-in">
   <h2>Contact me</h2>
   <div class="contact-form">
     <h2>Send me a message</h2>
     <form id="messageForm">
-      <textarea name="message" id="message" placeholder="Type your message here..." required></textarea>
+      <textarea name="message" id="message" rows="4" col="5" placeholder="Type your message here..." required></textarea>
       <button type="submit">Send</button>
     </form>
   </div>
-</section>
+</div>
 <footer>
   <p>&copy; 2024 My Stylish Portfolio</p>
 </footer>
