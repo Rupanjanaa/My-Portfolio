@@ -1,3 +1,124 @@
+
+#vanta-bg {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Make text appear above canvas */
+nav, header, section {
+  position: relative;
+  z-index: 1;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1.4s ease-in-out; /* Increase time and use ease-in-out for smooth transition */
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Center the nav initially */
+  width: auto;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-radius: 60px;
+  margin-top: 15px;
+  padding-top: 7px;
+  padding-bottom: 0px;
+
+  transition:
+  width 0.3s ease,
+  padding 0.3s ease,
+  right 0.4s ease,
+  left 0.4s ease,
+  transform 0.4s ease,
+  background-color 0.3s ease;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 0;
+  margin-left: 30px;
+}
+
+nav ul li {
+  margin: 0 15px;
+  border-radius: 20px;
+}
+
+nav.scrolled {
+  width: fit-content;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+nav.final-position {
+  background-color: rgba(228, 83, 239, 0.2);
+}
+
+
+.nav.visible li:nth-child(1) { animation-delay: 0.8s; }
+.nav.visible li:nth-child(2) { animation-delay: 1.0s; }
+.nav.visible li:nth-child(3) { animation-delay: 1.2s; }
+.nav.visible li:nth-child(4) { animation-delay: 1.4s; }
+
+@keyframes dropDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #00f7ff;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  z-index: 9999;
+}
+
+#loader span {
+  animation: blink 1.4s infinite;
+}
+
+#loader span:nth-child(1) { animation-delay: 0.2s; }
+#loader span:nth-child(2) { animation-delay: 0.4s; }
+#loader span:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes blink {
+  0%, 20% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   background-image: url("img_1.jpg");
@@ -53,14 +174,15 @@ header {
   padding-right: 30px;
   border-radius: 30px;
   margin-top: 30px;
-  box-shadow: 6px 5px 12px rgba(75, 6, 68, 1);
+  cursor: grab;
   transition: transform 0.3s ease;
 }
 
 .header-box:hover {
   transform: scale(1.05); /* slight zoom */
-}
+  box-shadow: 0 0 20px rgba(229, 83, 239, 0.342), 0 0 40px rgba(229, 83, 239, 0.342), 0 0 60px rgba(229, 83, 239, 0.342);
 
+}
 
 .header-box pre {
   color: #eee;
@@ -74,15 +196,16 @@ header {
   font-weight: bold;
   color: white;
   background-color: black;
+  cursor: grab;
   border-radius: 30px;
   border: 1.5px solid #000000;
-  transition: transform 0.3s ease;
+  transition: 0.3s ease-in-out;
 }
 
 .resume button:hover {
-  transform: rotate(3deg) scale(1.05);
-  background-color: black; /* <- Keep black on hover */
-  color: white; 
+  background-color: #00f7ff;
+  color: #121212;
+  box-shadow: 0 0 20px rgba(229, 83, 239, 0.342), 0 0 40px rgba(229, 83, 239, 0.342), 0 0 60px rgba(229, 83, 239, 0.342);
 }
 
 .left-side h2 {
@@ -95,45 +218,20 @@ header {
   margin-left: 60px;
   border-radius: 50%;
   overflow: hidden;
+  cursor: grab;
   border: 5px inset purple;
   transition: transform 0.3s ease; /* Add transition here */
 }
 
 .profile-pic:hover {
-  transform: scale(1.05); /* Slight zoom effect */
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(229, 83, 239, 0.342), 0 0 40px rgba(229, 83, 239, 0.342), 0 0 60px rgba(229, 83, 239, 0.342);
 }
 
 .profile-pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(228, 83, 239, 0.2); /* white with 60% opacity */
-  backdrop-filter: blur(10px); /* optional: adds a blur behind the nav */
-  z-index: 1000;
-  padding-top: 10px;
-  padding-bottom: 0px;
-}
-
-
-nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;   /* This aligns all items vertically */
-  justify-content: flex-end;
-  gap: 14px;              /* Or margin on li, your choice */
-  padding: 0;
-  margin-left: 30px;
-}
-
-
-nav ul li {
-  margin: 0 15px;
 }
 
 .button-link {
@@ -153,7 +251,6 @@ nav ul li {
   background-color: #6b0a0a7b;
   color: black;
 }
-
 
 nav ul li a {
   color: white;
@@ -177,11 +274,11 @@ nav ul li a:hover {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   margin: auto;
   background-color: black;
-  max-width: 800px;
+  max-width: 850px;
   padding: 20px 46px 30px 46px;
   border-radius: 40px;
 }
@@ -298,7 +395,7 @@ nav ul li a:hover {
 }
 
 .left-div li:hover {
-  background-color: red ;/* Darker pink */
+  background-color:  #d86767a1;/* Darker pink */
   color: black; /* Text turns black */
   transform: scale(1.1); /* Slight zoom */
 }
@@ -306,7 +403,6 @@ nav ul li a:hover {
 .left-div li:active {
     transform: scale(1); /* Back to normal when clicked */
 }
-
 
 #project {
 display: flex;
@@ -476,15 +572,4 @@ footer p {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.8);
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease-in-out, transform 1.4s ease-in-out; /* Increase time and use ease-in-out for smooth transition */
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
 }

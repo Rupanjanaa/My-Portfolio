@@ -1,4 +1,81 @@
-// 1️⃣ Greeting Text Change
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+window.addEventListener("DOMContentLoaded", function () {
+  VANTA.NET({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0xffffff,
+    backgroundColor: 0x0a0a0a
+  });
+});
+
+
+
+function showLoader(event) {
+  event.preventDefault();
+  document.getElementById("loader").style.display = "block";
+
+  setTimeout(() => {
+    window.location.href = event.target.href;
+  }, 2000);
+}
+window.addEventListener("beforeunload", () => {
+  window.scrollTo(0, 0);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const nav = document.querySelector("nav");
+  const scrollThreshold = 200;
+
+  // Force scroll to top ASAP
+  window.scrollTo(0, 0);
+
+  // Start centered
+  nav.style.left = "50%";
+  nav.style.transform = "translateX(-50%)";
+  nav.style.right = "auto";
+
+  // Apply smooth transition to right property too
+  nav.style.transition = "right 0.5s ease, left 0.5s ease, transform 0.5s ease";
+
+  // Scroll handler
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const progress = Math.min(scrollY / scrollThreshold, 1);
+
+    if (progress > 0) {
+      nav.classList.add("scrolled");
+
+      const endRight = 30;
+      const newRight = endRight * progress;
+
+      nav.style.left = "auto";
+      nav.style.transform = "none";
+      nav.style.right = `${newRight}px`;
+
+      if (progress >= 0.98) {
+        nav.classList.add("final-position");
+      } else {
+        nav.classList.remove("final-position");
+      }
+    } else {
+      // Smooth slide back to center
+      nav.classList.remove("scrolled", "final-position");
+      nav.style.right = "auto";
+      nav.style.left = "50%";
+      nav.style.transform = "translateX(-50%)";
+    }
+  });
+});
+
 const greet = document.getElementById("greeting");
 
 if (greet) {
