@@ -12,11 +12,16 @@ window.addEventListener("DOMContentLoaded", function () {
     minWidth: 200.00,
     scale: 1.00,
     scaleMobile: 1.00,
-    color: 0xffffff,
-    backgroundColor: 0x0a0a0a
+
+    // ✔️ Custom configuration you requested:
+    color: 0xa10863,
+    backgroundColor: 0x23153c,
+    points: 10,
+    maxDistance: 20,
+    spacing: 20,
+    showDots: true
   });
 });
-
 
 
 function showLoader(event) {
@@ -103,32 +108,25 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-function showContent(section) {
-    // Hide all content items
-    const contentItems = document.querySelectorAll('.content-item');
-    contentItems.forEach(item => {
-      item.classList.remove('active');
-    });
-  
-    // Show the selected section
-    const selectedContent = document.getElementById(section);
-    selectedContent.classList.add('active');
-  }
-
-  
-function showContent(section) {
+  function showContent(section) {
     const textArea = document.getElementById('text-area');
+    const image = document.getElementById('education-img');
     let html = '';
-  
+    let imageSrc = '';
+
     if (section === 'school') {
       html = `<h3>School</h3><p>I completed my schooling at XYZ High School with a focus on Science and Mathematics.</p>`;
+      imageSrc = 'image1.png';
     } else if (section === 'college') {
       html = `<h3>College</h3><p>I pursued my Bachelor's degree in Computer Science from ABC University.</p>`;
+      imageSrc = 'img.png';
     } else if (section === 'certificates') {
       html = `<h3>Certificates</h3><p>Certified in Front-End Development from Meta and participated in the Smart India Hackathon 2023.</p>`;
+      imageSrc = 'figma.png';
     }
-  
+
     textArea.innerHTML = html;
+    image.src = imageSrc;
   }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -152,3 +150,4 @@ document.addEventListener('DOMContentLoaded', function() {
     appearOnScroll.observe(fader);
   });
 });
+

@@ -4,6 +4,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  background-color: 0x23153c;
   z-index: 0;
 }
 
@@ -16,7 +17,7 @@ nav, header, section {
 body, html {
   margin: 0;
   padding: 0;
-  height: auto;
+  height: 100%;
   font-family: 'Arial', sans-serif;
   color: white;
 }
@@ -66,6 +67,37 @@ nav ul {
 nav ul li {
   margin: 0 15px;
   border-radius: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: rgba(173, 21, 184, 0.95);
+}
+
+.button-link {
+  display: inline-block;              /* Ensures it behaves like a button */
+  background-color: #000000;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 40px;                /* Large radius to get that pill shape */
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border: none;
+}
+.button-link:hover {
+  background-color: rgb(172, 9, 184);
+  color: rgb(0, 0, 0);
 }
 
 nav.scrolled {
@@ -154,6 +186,14 @@ header {
   color: white;
 }
 
+.container pre {
+  margin-bottom: 20px;
+  margin-top: 35px;
+  margin-left: 94px;
+  text-align: left;
+  color: white;
+}
+
 .header-text {
   padding-left: 90px;
   text-align: left;
@@ -171,7 +211,7 @@ header {
   background-color: black;
   padding: 10px;
   padding-left: 30px;
-  padding-right: 30px;
+  padding-right: 100px;
   border-radius: 30px;
   margin-top: 30px;
   cursor: grab;
@@ -203,8 +243,8 @@ header {
 }
 
 .resume button:hover {
-  background-color: #00f7ff;
-  color: #121212;
+  background-color: rgba(228, 83, 239, 0.2);
+  color: #ffffff;
   box-shadow: 0 0 20px rgba(229, 83, 239, 0.342), 0 0 40px rgba(229, 83, 239, 0.342), 0 0 60px rgba(229, 83, 239, 0.342);
 }
 
@@ -234,37 +274,6 @@ header {
   object-fit: cover;
 }
 
-.button-link {
-  display: inline-block;              /* Ensures it behaves like a button */
-  background-color: #000000;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 40px;                /* Large radius to get that pill shape */
-  font-family: monospace;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
-  border: none;
-}
-.button-link:hover {
-  background-color: #6b0a0a7b;
-  color: black;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-family: monospace;
-  font-size: 18px;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: black;
-}
-
 .skills-title h2 {
   font-family: 'Lobster', cursive;
   font-size: 60px;
@@ -273,10 +282,11 @@ nav ul li a:hover {
 }
 
 .skills-grid {
+  margin-top: 36px;
+  margin-left: 10%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  margin: auto;
   background-color: black;
   max-width: 850px;
   padding: 20px 46px 30px 46px;
@@ -317,7 +327,7 @@ nav ul li a:hover {
 }
 
 .icon img:hover {
-  transform: scale(1.1);                /* ← the only thing that changes */
+  transform: scale(1.25);                /* ← the only thing that changes */
 }
 
 .info {
@@ -354,10 +364,21 @@ nav ul li a:hover {
 
 .right-div {
   flex: 1; /* Remaining space */
-  background-color: rgb(232, 94, 245,0.5);
+  background-color: black;
   border-radius: 30px;
   padding: 20px;
   text-align: left;
+  cursor: grab;
+  transition: transform 0.3s ease; /* Add transition here */
+}
+
+.right-div:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(229, 83, 239, 0.342), 0 0 40px rgba(229, 83, 239, 0.342), 0 0 60px rgba(229, 83, 239, 0.342);
+}
+
+.right-div h3, .text-area {
+  margin-left: 30px;
 }
 
 .content-wrapper {
@@ -372,10 +393,22 @@ nav ul li a:hover {
   color: white;
 }
 
+.inner-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 200px;
+  max-height: 200px;
+  overflow: hidden; 
+}
+
 .inner-right img {
-  max-width: 150px;
+  width: 100%;        
+  height: auto;
   border-radius: 10px;
 }
+
+
 
 .left-div ul {
   list-style: none;
@@ -495,81 +528,129 @@ flex-direction: column;
   font-size: 16px;
 }
 
-.contact-form-container button {
-  display: inline-block;
-  margin: 20px 10px;
-  padding: 15px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  background-color: black;
-  border-radius: 5px;
-  border: 1.5px solid #800000;
-  transition: background-color 0.3s;
+
+#macbook-top {
+  margin-left: 230px;
+  background: #c0c0c0;
+  border-radius: 20px 20px 10px 10px;
+  width: 700px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
 }
 
-button:hover {
-    background-color: #333;
-}
-
-.contact-form-container h2 {
-  text-align: left;
-  margin-top: 10px;  /* Reset margin-top */
-  padding-bottom: 2px;  /* Add padding instead of margin to prevent collapse */
-  margin-left: 50px;
-  font-family: 'Lobster', cursive;
-  font-size: 50px; /* Reduced size */
-  color: rgb(255, 255, 255);
-}
-
-.contact-form {
-  margin-top: 20px;
-  margin-left: 60px;
-  background: #2b2a2a;
+/* MacBook screen area */
+.macbook-screen {
+  background: #111;
   padding: 10px;
-  width: 500px;
-  border-radius: 8px;
-  box-shadow: 0px 0px 12px 2px #800000;
+  border-radius: 20px 20px 0 0;
+  position: relative;
 }
 
-.contact-form h2 {
-  font-family: 'Lobster', cursive;
-  font-size: 40px;
-  
-  color: rgb(255, 255, 255);
+/* Apple logo */
+.logo {
+  color: #ccc;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
-.contact-form form {
-  margin: 10px 30px 10px 30px;
+/* Inner window */
+.macbook-window {
+  background: #f4f4f4;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* Browser top bar */
+.content-navbar {
+  background: #e0e0e0;
+  border-radius: 10px 10px 0 0;
+  padding: 8px;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-textarea {
-  padding: 10px;
-  border: none;
+#top-menu {
+  display: flex;
+  gap: 8px;
+}
+
+#content-navbar-close,
+#content-navbar-minimize,
+#content-navbar-expand {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+#content-navbar-close { background: #ff5f57; }
+#content-navbar-minimize { background: #ffbd2e; }
+#content-navbar-expand { background: #28c840; }
+
+#below-menu {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 4px 8px;
   border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-footer {
-    background: #444;
-    color: #eee;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 20px;
+/* Form styling inside screen */
+.content-form {
+  padding: 15px;
+  background: #fff;
+  border-radius: 0 0 10px 10px;
 }
 
-footer p {
-    font-size: 16px;
-    margin: 0;
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-.contact-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
+textarea.form-control {
+  height: 100px;
+  resize: vertical;
+}
+
+#submit {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+#submit:hover {
+  background-color: #0056b3;
+}
+
+/* MacBook bottom */
+#macbook-bottom {
+  margin-left: 230px;
+  margin-bottom: 40px;
+  width: 700px;
+  height: 20px;
+  background: #c0c0c0;
+  border-radius: 0 0 10px 10px;
+  position: relative;
+}
+
+#macbook-notch {
+  width: 80px;
+  height: 8px;
+  background: #999;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-top: 6px;
 }
