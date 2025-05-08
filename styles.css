@@ -1,4 +1,3 @@
-
 #vanta-bg {
   min-height: 100vh;
   width: 100%;
@@ -18,13 +17,25 @@ body, html {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Courier New', Courier, monospace; /* Use monospace here */
   color: white;
+  background-image: url("img_1.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #7645d8;
+  text-align: center;
+  line-height: 1.6;
 }
+
+
+#greeting {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1s ease-in-out, transform 1.4s ease-in-out; /* Increase time and use ease-in-out for smooth transition */
+  transition: opacity 1s ease-in-out, transform 1.1s ease-in-out; /* Increase time and use ease-in-out for smooth transition */
 }
 
 .fade-in.visible {
@@ -42,8 +53,9 @@ nav {
   z-index: 1000;
   border-radius: 60px;
   margin-top: 15px;
-  padding-top: 7px;
-  padding-bottom: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
 
   transition:
   width 0.3s ease,
@@ -70,7 +82,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-family: monospace;
   font-size: 18px;
@@ -79,14 +91,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: rgba(173, 21, 184, 0.95);
+  color: rgba(240, 0, 140, 0.95);
 }
 
 .button-link {
   display: inline-block;              /* Ensures it behaves like a button */
   background-color: #000000;
   color: white;
-  padding: 10px 16px;
+  padding: 10px 10px;
   border-radius: 40px;                /* Large radius to get that pill shape */
   font-family: monospace;
   font-size: 18px;
@@ -151,18 +163,6 @@ nav.final-position {
   100% { opacity: 0; }
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background-image: url("img_1.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  background-color: #7645d8;
-}
-
 header {
   color: #eee;
   padding: 50px;
@@ -179,7 +179,6 @@ header {
 }
 
 .container h2 {
-  font-family: 'Lobster', cursive;
   font-size: 60px;
   margin-bottom: 20px;
   text-align: left;
@@ -192,6 +191,10 @@ header {
   margin-left: 94px;
   text-align: left;
   color: white;
+}
+
+.info {
+  font-family: Garamond;
 }
 
 .header-text {
@@ -408,8 +411,6 @@ header {
   border-radius: 10px;
 }
 
-
-
 .left-div ul {
   list-style: none;
   padding: 0;
@@ -428,7 +429,9 @@ header {
 }
 
 .left-div li:hover {
-  background-color:  #d86767a1;/* Darker pink */
+  background-color:  #ff96f8;
+  font-weight: bold;
+  cursor: grab;
   color: black; /* Text turns black */
   transform: scale(1.1); /* Slight zoom */
 }
@@ -464,9 +467,9 @@ flex-direction: column;
 
 .carousel-item {
   flex: 0 0 120px;
-  border-radius: 0.5rem;
+  border-radius: 20px;
   transition: 0.5s ease-in-out;
-  cursor: pointer;
+  cursor: grab;
   position: relative;
   overflow: hidden;
   box-shadow: 1px 5px 15px #1e0e3e;
@@ -477,15 +480,15 @@ flex-direction: column;
 }
 
 .carousel-item:nth-child(1) {
-  background-image: url('img_1.png');
+  background-image: url('portfolio.png');
 }
 
 .carousel-item:nth-child(2) {
-  background-image: url('img_2.png');
+  background-image: url('calculator.png');
 }
 
 .carousel-item:nth-child(3) {
-  background-image: url('img_3.png');
+  background-image: url('banking.jpg');
 }
 
 .carousel-item img {
@@ -509,7 +512,7 @@ flex-direction: column;
   opacity: 0.8px;
   color: white;
   padding: 10px;
-  text-align: center;
+  text-align: left;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
@@ -523,9 +526,25 @@ flex-direction: column;
   margin: 5px 0;
 }
 
-.content span {
-  margin-bottom: 5px;
-  font-size: 16px;
+.content pre {
+  margin: 5px 0;
+  font-size: 10px;
+}
+
+.check-it-out-btn {
+  padding: 8px 16px;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: #771287;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.check-it-out-btn:hover {
+  box-shadow: 0 0 20px rgba(229, 83, 239, 0.342), 0 0 40px rgba(229, 83, 239, 0.342), 0 0 60px rgba(229, 83, 239, 0.342);
 }
 
 

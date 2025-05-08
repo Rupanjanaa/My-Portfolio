@@ -115,14 +115,16 @@ document.querySelectorAll('nav a').forEach(anchor => {
     let imageSrc = '';
 
     if (section === 'school') {
-      html = `<h3>School</h3><p>I completed my schooling at XYZ High School with a focus on Science and Mathematics.</p>`;
-      imageSrc = 'image1.png';
+      html = `<h3>School</h3><p>I completed my schooling from Kendriya Vidyalaya, EAC,
+    Upper Shillong, Shillong with PCM in higher secondary.</p>`;
+      imageSrc = 'image2.png';
     } else if (section === 'college') {
-      html = `<h3>College</h3><p>I pursued my Bachelor's degree in Computer Science from ABC University.</p>`;
-      imageSrc = 'img.png';
+      html = `<h3>College</h3><p>I did my B.Tech in Computer Science and Engineering from Amity University, Kolkata. (2021 -2025)</p>`;
+      imageSrc = 'image1.png';
     } else if (section === 'certificates') {
-      html = `<h3>Certificates</h3><p>Certified in Front-End Development from Meta and participated in the Smart India Hackathon 2023.</p>`;
-      imageSrc = 'figma.png';
+      html = `<h3>Certificates</h3><p>I completed the 'Introduction to Front-End Development' course on Coursera, offered by Meta.
+      I have also earned a beginner-level SQL certification from HackerRank.</p>`;
+      imageSrc = 'meta.jpg';
     }
 
     textArea.innerHTML = html;

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
@@ -16,15 +17,16 @@
 
   <nav class="nav fade-in visible">
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#project">Projects</a></li>
-      <li><a href="#contact" class="button-link">Contact me</a></li>
+      <li><a href="#bout">About</a></li>
+      <li><a href="#ski">Skills</a></li>
+      <li><a href="#ed">Education</a></li>
+      <li><a href="#po">Projects</a></li>
+      <li><a href="#co" class="button-link">Contact me</a></li>
     </ul>
   </nav>
   
 <header>
-  <div class="header-text fade-in">
+  <div id="bout" class="header-text fade-in">
     <h1 id="greeting">HI THERE!</h1>
     <div class="header-box">
       <h2>I'M RUPANJANA BHATTACHARJEE.</h2>
@@ -36,7 +38,9 @@
     </pre>
     </div>
     <div class="resume fade-in">
-      <button onclick="location.href='resume.pdf'">Download CV</button>
+      <a href="RUPANJANAResume.pdf" download="Rupanjana-Bhattacharjee-CV.pdf">
+        <button>Download CV</button>
+      </a>
     </div>
   </div>
   <div class="profile-pic fade-in">
@@ -44,15 +48,15 @@
   </div>
 </header>
 
-<div class="container fade-in">
+<div id="ski" class="container fade-in">
   <h2>Skills</h2>
   <pre>
-    I'm a frontend and UI/UX enthusiast with a sharp eye for detail and a passion for crafting clean,
-    interactive, and accessible user experiences. Currently diving deep into React, JavaScript, and 
-    design tools like Figma and Canva, I blend code with creativity to bring digital interfaces to life.
-    Whether it’s prototyping in Figma, building responsive layouts with HTML/CSS, or optimizing performance
-    with Redux and JavaScript, I’m always eager to learn and iterate. I’ve also dabbled in backend basics 
-    with Java, MySQL, and a touch of Python— but the frontend is where I truly thrive.
+    I am a frontend-focused developer with strong skills in HTML, CSS, and JavaScript, and I specialize in building interactive,
+    responsive user interfaces using ReactJS and Redux for state management. I also use Figma and Canva for designing clean and
+    user-friendly layouts. Alongside frontend technologies, I am proficient in Python and Java, with a solid understanding of
+    Data Structures and Algorithms. I’m also familiar with SQL for handling data-driven applications.  I’m also familiar with
+    Computer Networks concepts, giving me a better understanding of how web applications function at a lower level. 
+    I constantly strive to learn and adapt to new tools and frameworks.
   </pre>
     <div class="skills-grid fade-in">
       <div class="skill">
@@ -61,9 +65,9 @@
         </div>
         <div class="info">
           <div class="bar">
-          <div class="progress" style="width: 80%;"></div>
+          <div class="progress" style="width: 35%;"></div>
         </div>
-        <span>80%</span>
+        <span>35%</span>
       </div>
     </div>
 
@@ -85,15 +89,51 @@
       </div>
       <div class="info">
         <div class="bar">
-          <div class="progress" style="width: 90%;"></div>
+          <div class="progress" style="width: 72%;"></div>
         </div>
-        <span>90%</span>
+        <span>72%</span>
       </div>
     </div>
 
     <div class="skill">
       <div class="icon">
         <img src="javascript.webp" alt="Skill Icon">
+      </div>
+      <div class="info">
+        <div class="bar">
+          <div class="progress" style="width: 40%;"></div>
+        </div>
+        <span>40%</span>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="icon">
+        <img src="redux.jpg" alt="Skill Icon">
+      </div>
+      <div class="info">
+        <div class="bar">
+          <div class="progress" style="width: 28%;"></div>
+        </div>
+        <span>28%</span>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="icon">
+        <img src="html.jpg" alt="Skill Icon">
+      </div>
+      <div class="info">
+        <div class="bar">
+          <div class="progress" style="width: 95%;"></div>
+        </div>
+        <span>95%</span>
+      </div>
+    </div>
+
+    <div class="skill">
+      <div class="icon">
+        <img src="css.jpg" alt="Skill Icon">
       </div>
       <div class="info">
         <div class="bar">
@@ -105,49 +145,13 @@
 
     <div class="skill">
       <div class="icon">
-        <img src="redux.jpg" alt="Skill Icon">
+        <img src="python.webp" alt="Skill Icon">
       </div>
       <div class="info">
         <div class="bar">
-          <div class="progress" style="width: 55%;"></div>
+          <div class="progress" style="width: 80%;"></div>
         </div>
-        <span>55%</span>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="icon">
-        <img src="html.jpg" alt="Skill Icon">
-      </div>
-      <div class="info">
-        <div class="bar">
-          <div class="progress" style="width: 32%;"></div>
-        </div>
-        <span>32%</span>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="icon">
-        <img src="css.jpg" alt="Skill Icon">
-      </div>
-      <div class="info">
-        <div class="bar">
-          <div class="progress" style="width: 32%;"></div>
-        </div>
-        <span>32%</span>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="icon">
-        <img src="react.webp" alt="Skill Icon">
-      </div>
-      <div class="info">
-        <div class="bar">
-          <div class="progress" style="width: 22%;"></div>
-        </div>
-        <span>22%</span>
+        <span>80%</span>
       </div>
     </div>
 
@@ -169,9 +173,9 @@
       </div>
       <div class="info">
         <div class="bar">
-          <div class="progress" style="width: 57%;"></div>
+          <div class="progress" style="width: 87%;"></div>
         </div>
-        <span>57%</span>
+        <span>87%</span>
       </div>
     </div>
 
@@ -181,9 +185,9 @@
       </div>
       <div class="info">
         <div class="bar">
-          <div class="progress" style="width: 57%;"></div>
+          <div class="progress" style="width: 97%;"></div>
         </div>
-        <span>57%</span>
+        <span>97%</span>
       </div>
     </div>
 
@@ -193,15 +197,15 @@
       </div>
       <div class="info">
         <div class="bar">
-          <div class="progress" style="width: 57%;"></div>
+          <div class="progress" style="width: 68%;"></div>
         </div>
-        <span>57%</span>
+        <span>68%</span>
       </div>
     </div>
   </div>
 </div>
 
-  <div class="container fade-in">
+  <div id="ed" class="container fade-in">
     <h2>Education</h2>
     <div class="wrapper fade-in">
       <div class="left-div  fade-in">
@@ -228,7 +232,7 @@
 
 
 
-<div class="container fade-in">
+<div id="po" class="container fade-in">
   <h2>Projects</h2>
   <div class="carousel-container  fade-in">
     <div class="carousel fade-in">
@@ -236,19 +240,40 @@
         <div class="carousel-item">
           <div class="content">
             <h2>Portfolio</h2>
-            <span>Description 1</span>
+            <pre>HTML • CSS • JavaScript • Figma • Vanta.js
+A personal portfolio with animated 
+Vanta.js backgrounds and a modern,
+responsive design, crafted in Figma.
+              </pre>
+              <a href="https://github.com/Rupanjanaa/My-Portfolio.git" target="_blank">
+                <button class="check-it-out-btn">Check it out</button>
+              </a>
           </div>
         </div>
         <div class="carousel-item">
           <div class="content">
             <h2>Calculator</h2>
-            <span>Description 2</span>
+            <pre>HTML • CSS • JavaScript • Vanta.js
+A basic calculator with a clean UI,
+dynamic Vanta.js background,
+styled as a mobile interface
+            </pre>
+            <a href="https://github.com/Rupanjanaa/Calculator.git" target="_blank">
+              <button class="check-it-out-btn">Check it out</button>
+            </a>
           </div>
         </div>
         <div class="carousel-item">
           <div class="content">
             <h2>Online Banking site</h2>
-            <span>Description 3</span>
+            <pre>React • TypeScript • Redux
+Banking site with robust state management. 
+Core logic is functional; 
+UI is under active design.
+            </pre>
+            <a href="https://github.com/Rupanjanaa/bank-app.git" target="_blank">
+              <button class="check-it-out-btn">Check it out</button>
+            </a>
           </div>
         </div>
       </div>
@@ -256,7 +281,7 @@
   </div>
 </div>
 
-<div class="container fade-in">
+<div id="co" class="container fade-in">
   <h2>Contact Me</h2>
   <br>
   <div id="macbook-top">
@@ -301,10 +326,23 @@
 </div>
 </div>
 
-<footer>
-  <p>&copy; 2024 My Stylish Portfolio</p>
-</footer>
+<footer style="text-align: center; background-color: #2e004f; padding: 20px; color: white;">
+  <!-- Icons with links -->
+  <div style="margin-bottom: 10px;">
+    <a href="https://www.linkedin.com/in/rupanjana-bhattacharjee" target="_blank" style="margin: 0 10px; color: white;">
+      <i class="fab fa-linkedin fa-2x"></i>
+    </a>
+    <a href="https://github.com/Rupanjanaa" target="_blank" style="margin: 0 10px; color: white;">
+      <i class="fab fa-github fa-2x"></i>
+    </a>
+    <a href="mailto:rupanjana72@gmail.com" target="_blank" style="margin: 0 10px; color: white;">
+      <i class="fas fa-envelope fa-2x"></i>
+    </a>
+  </div>
 
+  <!-- Copyright -->
+  <p>Rupanjana Bhattacharjee &copy; 2025</p>
+</footer>
 <script src="script.js"></script>
 
 </div>
