@@ -25,8 +25,21 @@ body, html {
   background-color: #7645d8;
   text-align: center;
   line-height: 1.6;
+  cursor: none;
 }
 
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(240, 0, 140, 0.95);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: transform 0.1s ease;
+  z-index: 9999;
+}
 
 #greeting {
   font-family: 'Courier New', Courier, monospace;
@@ -55,6 +68,7 @@ nav {
   margin-top: 15px;
   padding-top: 2px;
   padding-bottom: 2px;
+  cursor: none;
 
 
   transition:
@@ -88,6 +102,7 @@ nav ul li a {
   font-size: 18px;
   font-weight: bold;
   transition: color 0.3s;
+  cursor: none;
 }
 
 nav ul li a:hover {
@@ -217,7 +232,6 @@ header {
   padding-right: 100px;
   border-radius: 30px;
   margin-top: 30px;
-  cursor: grab;
   transition: transform 0.3s ease;
 }
 
@@ -239,10 +253,10 @@ header {
   font-weight: bold;
   color: white;
   background-color: black;
-  cursor: grab;
   border-radius: 30px;
   border: 1.5px solid #000000;
   transition: 0.3s ease-in-out;
+  cursor: none;
 }
 
 .resume button:hover {
@@ -261,7 +275,6 @@ header {
   margin-left: 60px;
   border-radius: 50%;
   overflow: hidden;
-  cursor: grab;
   border: 5px inset purple;
   transition: transform 0.3s ease; /* Add transition here */
 }
@@ -371,7 +384,6 @@ header {
   border-radius: 30px;
   padding: 20px;
   text-align: left;
-  cursor: grab;
   transition: transform 0.3s ease; /* Add transition here */
 }
 
@@ -421,7 +433,6 @@ header {
   margin-bottom: 20px;
   background-color: rgb(232, 94, 245,0.6);
   color: white;
-  cursor: pointer;
   border-radius: 50px;
   transition: background-color 0.3s ease-in-out, 
               color 0.3s ease-in-out, 
@@ -431,7 +442,6 @@ header {
 .left-div li:hover {
   background-color:  #ff96f8;
   font-weight: bold;
-  cursor: grab;
   color: black; /* Text turns black */
   transform: scale(1.1); /* Slight zoom */
 }
@@ -469,7 +479,6 @@ flex-direction: column;
   flex: 0 0 120px;
   border-radius: 20px;
   transition: 0.5s ease-in-out;
-  cursor: grab;
   position: relative;
   overflow: hidden;
   box-shadow: 1px 5px 15px #1e0e3e;
@@ -535,11 +544,11 @@ flex-direction: column;
   padding: 8px 16px;
   font-weight: bold;
   font-size: 12px;
-  background-color: #771287;
+  background-color: #5d066b;
+  cursor: none;
   color: white;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
   transition: background-color 0.3s;
 }
 
@@ -640,7 +649,7 @@ textarea.form-control {
 }
 
 #submit {
-  background-color: #007bff;
+  background-color: #75055b;
   color: white;
   border: none;
   padding: 12px;
@@ -651,7 +660,7 @@ textarea.form-control {
 }
 
 #submit:hover {
-  background-color: #0056b3;
+  background-color: #47064d;
 }
 
 /* MacBook bottom */

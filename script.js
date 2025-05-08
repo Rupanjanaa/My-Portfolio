@@ -36,6 +36,13 @@ window.addEventListener("beforeunload", () => {
   window.scrollTo(0, 0);
 });
 
+const cursor = document.querySelector('.cursor-follower');
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const nav = document.querySelector("nav");
   const scrollThreshold = 200;
