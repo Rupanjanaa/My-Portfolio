@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap"
+    rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <div id="vanta-bg">
     <a href="http://127.0.0.1:5500/demo.html" onclick="showLoader(event)"> </a>
-  <div id="loader">.<span>.</span><span>.</span><span>.</span></div>
-  <div class="cursor-follower"></div>
+    <div id="loader">.<span>.</span><span>.</span><span>.</span></div>
+    <div class="cursor-follower"></div>
 
-  <nav class="nav fade-in visible">
-    <ul>
-      <li><a href="#bout">About</a></li>
-      <li><a href="#ski">Skills</a></li>
-      <li><a href="#ed">Education</a></li>
-      <li><a href="#po">Projects</a></li>
-      <li><a href="#co" class="button-link">Contact me</a></li>
-    </ul>
-  </nav>
-  
-<header>
-  <div id="bout" class="header-text fade-in">
-    <h1 id="greeting">HI THERE!</h1>
-    <div class="header-box">
-      <h2>I'M RUPANJANA BHATTACHARJEE.</h2>
-    <pre>
+    <nav class="nav fade-in visible">
+      <ul>
+        <li><a href="#bout">About</a></li>
+        <li><a href="#ski">Skills</a></li>
+        <li><a href="#ed">Education</a></li>
+        <li><a href="#po">Projects</a></li>
+        <li><a href="#co" class="button-link">Contact me</a></li>
+      </ul>
+    </nav>
+
+    <header>
+      <div id="bout" class="header-text fade-in">
+        <h1 id="greeting">HI THERE!</h1>
+        <div class="header-box">
+          <h2>I'M RUPANJANA BHATTACHARJEE.</h2>
+          <pre>
       — a Frontend-focused CSE undergrad from Kolkata 
       with a thing for clean code and crisp UIs.
       From pixel-perfect designs to late-night coding sprints,
       I turn caffeine and curiosity into seamless digital experiences.
     </pre>
-    </div>
-    <div class="resume fade-in">
-      <a href="RUPANJANAResume.pdf" download="Rupanjana-Bhattacharjee-CV.pdf">
-        <button>Download CV</button>
-      </a>
-    </div>
-  </div>
-  <div class="profile-pic fade-in">
-    <img src="anime.jpg" alt="Profile Picture">
-  </div>
-</header>
+        </div>
+        <div class="resume fade-in">
+          <a href="RUPANJANAResume.pdf" download="Rupanjana-Bhattacharjee-CV.pdf">
+            <button>Download CV</button>
+          </a>
+        </div>
+      </div>
+      <div class="profile-pic fade-in">
+        <img src="anime.jpg" alt="Profile Picture">
+      </div>
+    </header>
 
-<div id="ski" class="container fade-in">
-  <h2>Skills</h2>
-  <pre>
+    <div id="ski" class="container fade-in">
+      <h2>Skills</h2>
+      <pre>
     I am a frontend-focused developer with strong skills in HTML, CSS, and JavaScript, and I specialize in building interactive,
     responsive user interfaces using ReactJS and Redux for state management. I also use Figma and Canva for designing clean and
     user-friendly layouts. Alongside frontend technologies, I am proficient in Python and Java, with a solid understanding of
@@ -59,296 +62,298 @@
     Computer Networks concepts, giving me a better understanding of how web applications function at a lower level. 
     I constantly strive to learn and adapt to new tools and frameworks.
   </pre>
-    <div class="skills-grid">
-      <div class="skill">
-        <div class="icon">
-          <img src="java.png" alt="Skill Icon">
+      <div class="skills-grid">
+        <div class="skill">
+          <div class="icon">
+            <img src="java.png" alt="Skill Icon">
+          </div>
+          <div class="info">
+            <div class="bar">
+              <div class="progress" style="width: 35%;"></div>
+            </div>
+            <span>35%</span>
+          </div>
         </div>
-        <div class="info">
-          <div class="bar">
-          <div class="progress" style="width: 35%;"></div>
+
+        <div class="skill">
+          <div class="icon">
+            <img src="react.jpg" alt="Skill Icon">
+          </div>
+          <div class="info">
+            <div class="bar">
+              <div class="progress" style="width: 57%;"></div>
+            </div>
+            <span>57%</span>
+          </div>
         </div>
-        <span>35%</span>
+
+        <div class="skill" id="sql">
+          <div class="icon">
+            <img src="sql.png" alt="Skill Icon">
+          </div>
+          <div class="info">
+            <div class="bar">
+              <div class="progress" style="width: 72%;"></div>
+            </div>
+            <span>72%</span>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="icon">
+            <img src="javascript.webp" alt="Skill Icon">
+          </div>
+          <div class="info">
+            <div class="bar">
+              <div class="progress" style="width: 40%;"></div>
+            </div>
+            <span>40%</span>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="icon">
+            <img src="redux.jpg" alt="Skill Icon">
+          </div>
+          <div class="info">
+            <div class="bar">
+              <div class="progress" style="width: 28%;"></div>
+            </div>
+            <span>28%</span>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="icon">
+            <img src="html.jpg" alt="Skill Icon">
+          </div>
+          <div class="info">
+            <div class="bar">
+              <div class="progress" style="width: 95%;"></div>
+            </div>
+            <span>95%</span>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="icon">
+            <img src="css.jpg" alt="Skill Icon">
+          </div>
+          <div class="info">
+            <div class="bar">
+              <div class="progress" style="width: 92%;"></div>
+            </div>
+            <span>92%</span>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="icon">
+            <img src="python.webp" alt="Skill Icon">
+          </div>
+          <div class="info">
+            <div class="bar">
+              <div class="progress" style="width: 80%;"></div>
+            </div>
+            <span>80%</span>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="icon">
+            <img src="figma.png" alt="Skill Icon">
+          </div>
+          <div class="info">
+            <div class="bar">
+              <div class="progress" style="width: 57%;"></div>
+            </div>
+            <span>57%</span>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="icon">
+            <img src="ibis.jpg" alt="Skill Icon">
+          </div>
+          <div class="info">
+            <div class="bar">
+              <div class="progress" style="width: 87%;"></div>
+            </div>
+            <span>87%</span>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="icon">
+            <img src="canva.jpg" alt="Skill Icon">
+          </div>
+          <div class="info">
+            <div class="bar">
+              <div class="progress" style="width: 97%;"></div>
+            </div>
+            <span>97%</span>
+          </div>
+        </div>
+
+        <div class="skill">
+          <div class="icon">
+            <img src="word-press.jpg" alt="Skill Icon">
+          </div>
+          <div class="info">
+            <div class="bar">
+              <div class="progress" style="width: 68%;"></div>
+            </div>
+            <span>68%</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="skill">
-      <div class="icon">
-        <img src="react.jpg" alt="Skill Icon">
-      </div>
-      <div class="info">
-        <div class="bar">
-          <div class="progress" style="width: 57%;"></div>
+    <div id="ed" class="container fade-in">
+      <h2>Education</h2>
+      <div class="wrapper fade-in">
+        <div class="left-div  fade-in">
+          <ul>
+            <li onclick="showContent('school')">School</li>
+            <li onclick="showContent('college')">College</li>
+            <li onclick="showContent('certificates')">Certificates</li>
+          </ul>
         </div>
-        <span>57%</span>
-      </div>
-    </div>
-
-    <div class="skill" id="sql">
-      <div class="icon">
-        <img src="sql.png" alt="Skill Icon">
-      </div>
-      <div class="info">
-        <div class="bar">
-          <div class="progress" style="width: 72%;"></div>
-        </div>
-        <span>72%</span>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="icon">
-        <img src="javascript.webp" alt="Skill Icon">
-      </div>
-      <div class="info">
-        <div class="bar">
-          <div class="progress" style="width: 40%;"></div>
-        </div>
-        <span>40%</span>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="icon">
-        <img src="redux.jpg" alt="Skill Icon">
-      </div>
-      <div class="info">
-        <div class="bar">
-          <div class="progress" style="width: 28%;"></div>
-        </div>
-        <span>28%</span>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="icon">
-        <img src="html.jpg" alt="Skill Icon">
-      </div>
-      <div class="info">
-        <div class="bar">
-          <div class="progress" style="width: 95%;"></div>
-        </div>
-        <span>95%</span>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="icon">
-        <img src="css.jpg" alt="Skill Icon">
-      </div>
-      <div class="info">
-        <div class="bar">
-          <div class="progress" style="width: 92%;"></div>
-        </div>
-        <span>92%</span>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="icon">
-        <img src="python.webp" alt="Skill Icon">
-      </div>
-      <div class="info">
-        <div class="bar">
-          <div class="progress" style="width: 80%;"></div>
-        </div>
-        <span>80%</span>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="icon">
-        <img src="figma.png" alt="Skill Icon">
-      </div>
-      <div class="info">
-        <div class="bar">
-          <div class="progress" style="width: 57%;"></div>
-        </div>
-        <span>57%</span>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="icon">
-        <img src="ibis.jpg" alt="Skill Icon">
-      </div>
-      <div class="info">
-        <div class="bar">
-          <div class="progress" style="width: 87%;"></div>
-        </div>
-        <span>87%</span>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="icon">
-        <img src="canva.jpg" alt="Skill Icon">
-      </div>
-      <div class="info">
-        <div class="bar">
-          <div class="progress" style="width: 97%;"></div>
-        </div>
-        <span>97%</span>
-      </div>
-    </div>
-
-    <div class="skill">
-      <div class="icon">
-        <img src="word-press.jpg" alt="Skill Icon">
-      </div>
-      <div class="info">
-        <div class="bar">
-          <div class="progress" style="width: 68%;"></div>
-        </div>
-        <span>68%</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <div id="ed" class="container fade-in">
-    <h2>Education</h2>
-    <div class="wrapper fade-in">
-      <div class="left-div  fade-in">
-        <ul>
-          <li onclick="showContent('school')">School</li>
-          <li onclick="showContent('college')">College</li>
-          <li onclick="showContent('certificates')">Certificates</li>
-        </ul>
-      </div>
-      <div class="right-div fade-in" id="content">
-        <div class="content-wrapper">
-          <div class="text-area" id="text-area">
-            <h3>Learning Logs: From Chalkboards to Keyboards</h3>
-            <pre>Go on, click something you're maybe curious about.
+        <div class="right-div fade-in" id="content">
+          <div class="content-wrapper">
+            <div class="text-area" id="text-area">
+              <h3>Learning Logs: From Chalkboards to Keyboards</h3>
+              <pre>Go on, click something you're maybe curious about.
               I’m just a static UI until you do.</pre>
-          </div>
-          <div class="inner-right">
-            <img src="eyes.jpg" alt="Education Image" id="education-img" />
+            </div>
+            <div class="inner-right">
+              <img src="eyes.jpg" alt="Education Image" id="education-img" />
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
 
 
-<div id="po" class="container fade-in">
-  <h2>Projects</h2>
-  <div class="carousel-container  fade-in">
-    <div class="carousel fade-in">
-      <div class="carousel-track">
-        <div class="carousel-item">
-          <div class="content">
-            <h2>Portfolio</h2>
-            <pre>HTML • CSS • JavaScript • Figma • Vanta.js
+    <div id="po" class="container fade-in">
+      <h2>Projects</h2>
+      <div class="carousel-container  fade-in">
+        <div class="carousel fade-in">
+          <div class="carousel-track">
+            <div class="carousel-item">
+              <div class="content">
+                <h2>Portfolio</h2>
+                <pre>HTML • CSS • JavaScript • Figma • Vanta.js
 A personal portfolio with animated 
 Vanta.js backgrounds and a modern,
 responsive design, crafted in Figma.
               </pre>
-              <a href="https://github.com/Rupanjanaa/My-Portfolio.git" target="_blank">
-                <button class="check-it-out-btn">Check it out</button>
-              </a>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="content">
-            <h2>Calculator</h2>
-            <pre>HTML • CSS • JavaScript • Vanta.js
+                <a href="https://github.com/Rupanjanaa/My-Portfolio.git" target="_blank">
+                  <button class="check-it-out-btn">Check it out</button>
+                </a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="content">
+                <h2>Calculator</h2>
+                <pre>HTML • CSS • JavaScript • Vanta.js
 A basic calculator with a clean UI,
 dynamic Vanta.js background,
 styled as a mobile interface
             </pre>
-            <a href="https://github.com/Rupanjanaa/Calculator.git" target="_blank">
-              <button class="check-it-out-btn">Check it out</button>
-            </a>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="content">
-            <h2>Online Banking site</h2>
-            <pre>React • TypeScript • Redux
+                <a href="https://github.com/Rupanjanaa/Calculator.git" target="_blank">
+                  <button class="check-it-out-btn">Check it out</button>
+                </a>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="content">
+                <h2>Online Banking site</h2>
+                <pre>React • TypeScript • Redux
 Banking site with robust state management. 
 Core logic is functional; 
 UI is under active design.
             </pre>
-            <a href="https://github.com/Rupanjanaa/bank-app.git" target="_blank">
-              <button class="check-it-out-btn">Check it out</button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="co" class="container fade-in">
-  <h2>Contact Me</h2>
-  <br>
-  <div id="macbook-top">
-    <div class="macbook-screen">
-      <i class="fa fa-apple logo"></i>
-      <div class="macbook-window">
-        <div class="macbook-browser">
-          <div class="content-navbar">
-            <div id="top-menu">
-              <div id="content-navbar-close"></div>
-              <div id="content-navbar-minimize"></div>
-              <div id="content-navbar-expand"></div>
-            </div>
-            <div id="below-menu">
-              <div id="back-forward">
-                <div id="back"></div>
-                <div id="forward"></div>
+                <a href="https://github.com/Rupanjanaa/bank-app.git" target="_blank">
+                  <button class="check-it-out-btn">Check it out</button>
+                </a>
               </div>
-              <div id="url"></div>
-              <div id="search"></div>
             </div>
           </div>
-
-          <!-- ✅ Form starts inside the MacBook screen only -->
-          <form onsubmit="return submitForm()">
-            <div class="content-form">
-              <input type="text" class="form-control" placeholder="Name" name="firstname" required>
-              <input type="email" class="form-control" placeholder="Email" name="email" required>
-              <input type="tel" class="form-control" placeholder="Phone Number" name="phone" required>
-              <textarea class="form-control" placeholder="Message" name="message" required></textarea>
-              <input type="submit" id="submit" value="Send message!">
-            </div>
-          </form>
-
         </div>
       </div>
     </div>
-  </div>
-  <div id="macbook-bottom">
-    <div id="macbook-notch"></div>
-  </div>
-</div>
-</div>
 
-<footer style="text-align: center; background-color: #2e004f; padding: 20px; color: white;">
-  <!-- Icons with links -->
-  <div style="margin-bottom: 10px;">
-    <a href="https://www.linkedin.com/in/rupanjana-bhattacharjee" target="_blank" style="margin: 0 10px; color: white;">
-      <i class="fab fa-linkedin fa-2x"></i>
-    </a>
-    <a href="https://github.com/Rupanjanaa" target="_blank" style="margin: 0 10px; color: white;">
-      <i class="fab fa-github fa-2x"></i>
-    </a>
-    <a href="mailto:rupanjana72@gmail.com" target="_blank" style="margin: 0 10px; color: white;">
-      <i class="fas fa-envelope fa-2x"></i>
-    </a>
+    <div id="co" class="container fade-in">
+      <h2>Contact Me</h2>
+      <br>
+      <div id="macbook-top">
+        <div class="macbook-screen">
+          <i class="fa fa-apple logo"></i>
+          <div class="macbook-window">
+            <div class="macbook-browser">
+              <div class="content-navbar">
+                <div id="top-menu">
+                  <div id="content-navbar-close"></div>
+                  <div id="content-navbar-minimize"></div>
+                  <div id="content-navbar-expand"></div>
+                </div>
+                <div id="below-menu">
+                  <div id="back-forward">
+                    <div id="back"></div>
+                    <div id="forward"></div>
+                  </div>
+                  <div id="url"></div>
+                  <div id="search"></div>
+                </div>
+              </div>
+
+              <!-- ✅ Form starts inside the MacBook screen only -->
+              <form onsubmit="return submitForm()">
+                <div class="content-form">
+                  <input type="text" class="form-control" placeholder="Name" name="firstname" required>
+                  <input type="email" class="form-control" placeholder="Email" name="email" required>
+                  <input type="tel" class="form-control" placeholder="Phone Number" name="phone" required>
+                  <textarea class="form-control" placeholder="Message" name="message" required></textarea>
+                  <input type="submit" id="submit" value="Send message!">
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="macbook-bottom">
+        <div id="macbook-notch"></div>
+      </div>
+    </div>
   </div>
 
-  <!-- Copyright -->
-  <p>Rupanjana Bhattacharjee &copy; 2025</p>
-</footer>
-<script src="script.js"></script>
+  <footer style="text-align: center; background-color: #2e004f; padding: 20px; color: white;">
+    <!-- Icons with links -->
+    <div style="margin-bottom: 10px;">
+      <a href="https://www.linkedin.com/in/rupanjana-bhattacharjee" target="_blank"
+        style="margin: 0 10px; color: white;">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      <a href="https://github.com/Rupanjanaa" target="_blank" style="margin: 0 10px; color: white;">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      <a href="mailto:rupanjana72@gmail.com" target="_blank" style="margin: 0 10px; color: white;">
+        <i class="fas fa-envelope fa-2x"></i>
+      </a>
+    </div>
 
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-<script src="vanta-background.js"></script>
+    <!-- Copyright -->
+    <p>Rupanjana Bhattacharjee &copy; 2025</p>
+  </footer>
+  <script src="script.js"></script>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="vanta-background.js"></script>
 </body>
+
 </html>

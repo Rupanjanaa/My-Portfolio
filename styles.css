@@ -682,3 +682,124 @@ textarea.form-control {
   margin: 0 auto;
   margin-top: 6px;
 }
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  nav {
+    width: 90%;
+    left: 5%;
+    transform: none;
+    padding: 8px;
+  }
+
+  .container, .skills-grid, .wrapper, .carousel-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .container h2, .skills-title h2 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .header-text {
+    padding-left: 10px;
+    text-align: center;
+  }
+
+  .header-text h1 {
+    font-size: 40px;
+  }
+
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px;
+    margin-left: 0;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .left-div, .right-div {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .right-div {
+    margin-top: 20px;
+  }
+
+  .inner-right {
+    max-width: 100%;
+    max-height: 200px;
+  }
+
+  .carousel-item {
+    flex: 0 0 80%;
+    height: 200px;
+  }
+
+  #macbook-top, #macbook-bottom {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .resume button {
+    padding: 14px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Tablets (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  nav {
+    width: 80%;
+    left: 10%;
+    transform: none;
+    padding: 10px;
+  }
+
+  .container h2, .skills-title h2 {
+    font-size: 48px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px;
+  }
+
+  .carousel-item {
+    flex: 0 0 180px;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
+
+  .right-div {
+    padding: 15px;
+  }
+
+  .resume button {
+    padding: 18px 30px;
+  }
+
+  #macbook-top, #macbook-bottom {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
