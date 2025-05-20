@@ -684,82 +684,149 @@ textarea.form-control {
 }
 /* Mobile (up to 768px) */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 8px;
-    margin-left: 0;
-  }
-
+  /* --- NAVIGATION FIX --- */
   nav {
-    width: 90%;
-    left: 5%;
-    transform: none;
-    padding: 8px;
+    position: static !important;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    z-index: 10;
+    background-color: #111; /* adjust as per your theme */
   }
 
-  .container, .skills-grid, .wrapper, .carousel-container {
+  /* --- HEADER FIX: Order and Visibility --- */
+  .header {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    text-align: center;
+    padding-top: 10px;
   }
 
-  .container h2, .skills-title h2 {
-    font-size: 36px;
+  .header .greeting-text {
+    order: 1;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .header .profile-pic {
+    order: 2;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px 0;
+  }
+
+  .header .intro-text {
+    order: 3;
+    padding: 0 15px;
+    font-size: 1rem;
+  }
+
+  /* --- SKILLS SECTION FIX --- */
+  .skills-section {
+    padding: 20px 10px;
     text-align: center;
   }
 
-  .header-text {
-    padding-left: 10px;
-    text-align: center;
-  }
-
-  .header-text h1 {
-    font-size: 40px;
-  }
-
-  .profile-pic {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
+  .skills-section .skills-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
   }
 
   .skills-grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 20px;
-    margin-left: 0;
+    gap: 15px;
+    padding: 0 10px;
   }
 
-  .wrapper {
-    flex-direction: column;
-  }
-
-  .left-div, .right-div {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .right-div {
-    margin-top: 20px;
-  }
-
-  .inner-right {
+  /* Prevent overflow */
+  .skills-section * {
     max-width: 100%;
-    max-height: 200px;
+    box-sizing: border-box;
   }
 
-  .carousel-item {
-    flex: 0 0 80%;
-    height: 200px;
+  /* --- EDUCATION SECTION FIX --- */
+  .education-section {
+    padding: 20px 10px;
   }
 
-  #macbook-top, #macbook-bottom {
+  .education-section .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .education-section .text-area {
     width: 100%;
-    margin-left: 0;
+    padding: 10px 0;
   }
 
-  .resume button {
-    padding: 14px 20px;
-    font-size: 16px;
+  .education-section .timeline {
+    margin-top: 20px;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  /* --- PROJECTS SECTION FIX --- */
+  .projects-section {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .projects-section .carousel-wrapper {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .carousel {
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 20px;
+    padding-bottom: 10px;
+  }
+
+  .carousel > * {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+  }
+
+  .calculator-project {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  /* --- GENERAL FIXES --- */
+  .section {
+    padding: 20px 10px;
+  }
+
+  h2, h3, p {
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .container {
+    padding: 0 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  button {
+    width: 100%;
+    max-width: 250px;
   }
 }
 
